@@ -1,0 +1,57 @@
+.rewiews {
+    background: #f6f8fa;
+    padding-top: 57px;
+    padding-bottom: 45px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.container {
+    max-width: 1238px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #191c1f;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.slider{
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .rewiews {
+        padding-top: calc((100vw - 375px)/(768 - 375) * (33 - 27) + 27px);
+        padding-bottom: calc((100vw - 375px)/(768 - 375) * (45 - 37) + 37px);
+    }
+
+    .title {
+        margin-bottom: calc((100vw - 375px)/(768 - 375) * (42 - 26) + 26px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nonActive{
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: height .9s, opacity .3s;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .rewiews {
+        padding-top: 27px;
+        padding-bottom: 33px;
+        .title {
+            margin-bottom: 26px;
+        }
+    }
+}

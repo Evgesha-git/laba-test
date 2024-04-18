@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Inter;
+}
+
+ul {
+    list-style: none;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.navMobile-enter {
+    transform: translateX(-100%);
+}
+
+.navMobile-enter-active {
+    transform: translateX(0);
+    transition: transform 0.3s;
+}
+
+.navMobile-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.navMobile-exit-active {
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.faq-enter {
+    grid-template-rows: 0fr;
+    transition: 0.3s;
+}
+
+.faq-enter-active {
+    grid-template-rows: 1fr;
+    transition: 0.3s;
+}
+
+.faq-exit {
+    grid-template-rows: 1fr;
+    transition: 0.3s;
+}
+
+.faq-exit-active {
+    grid-template-rows: 0fr;
+    transition: 0.3s;
+    margin-top: 0 !important;
+}
+
+.swiperSlider {
+    display: flex;
+    padding-bottom: 58px;
+    height: 100%;
+    width: 100%;
+    .swiper-slide {
+        height: auto;
+        display: flex;
+    }
+}
+
+.prevBtn,
+.nextBtn {
+    margin-top: 142px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.nextBtn {
+    background: url(./assets/fi-sr-angle-right.png) no-repeat;
+
+    &.swiper-button-disabled {
+        background: url(./assets/fi-sr-angle-right-non-active.png) no-repeat;
+    }
+}
+
+.prevBtn {
+    background: url(./assets/fi-sr-angle-left.png) no-repeat;
+
+    &.swiper-button-disabled {
+        background: url(./assets/fi-sr-angle-left-non-active.png) no-repeat;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .prevBtn,
+    .nextBtn {
+        display: none;
+    }
+}

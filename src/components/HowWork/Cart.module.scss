@@ -1,0 +1,51 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    max-width: 342px;
+}
+
+.img {
+    align-self: flex-start;
+}
+
+.title {
+    margin-top: 16px;
+    color: #191c1f;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align-last: left;
+}
+
+.text {
+    margin-top: 4px;
+    color: #5e646a;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align-last: left;
+}
+
+@media screen and (max-width: 1125px) {
+    .item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .title {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img{
+        min-width: 56px;
+        height: 56px;
+
+        img{
+            width: 100%;
+        }
+    }
+}

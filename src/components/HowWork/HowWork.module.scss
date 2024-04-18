@@ -1,0 +1,134 @@
+.work {
+    padding-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 80px;
+    background: #fff;
+}
+
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #191c1f;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+}
+
+.icons {
+    margin-top: 61px;
+    display: flex;
+    gap: 10px;
+    text-indent: 0;
+    justify-content: space-between;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.leftTite {
+    color: #191c1f;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.leftText {
+    margin-top: 18px;
+    color: #5e646a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    &:last-child{
+        margin-top: 28px;
+    }
+}
+
+.img{
+    max-width: 592px;
+    min-width: 351px;
+    img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px 34px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .title{
+        font-size: calc((100vw - 375px)/(768 - 375) * (40 - 24) + 24px);
+        line-height: calc((100vw - 375px)/(768 - 375) * (56 - 32) + 32px);
+    }
+
+    .icons {
+        margin-top: calc((100vw - 375px)/(768 - 375) * (42 - 24) + 26px);
+    }
+
+    .route{
+        margin-top: 56px;
+    }
+
+    .leftTite {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .leftText{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 748px) {
+    .route{
+        flex-direction: column-reverse;
+        gap: 7px;
+    }
+
+    .leftTite{
+        text-align: center;
+    }
+
+    .leftText{
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .img{
+        min-width: 288px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .title{
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .icons {
+        margin-top: 26px;
+    }
+
+    .route{
+        gap: 27px;
+    }
+}

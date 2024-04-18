@@ -1,0 +1,135 @@
+.feedback {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #191c1f;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+}
+
+.form {
+    margin-top: 44px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.input {
+    width: 100%;
+}
+
+.confirm {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.button {
+    width: 100%;
+    background: #2a6cea;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+        background: #397dff;
+    }
+
+    &:disabled{
+        background: #7ba9ff;
+    }
+}
+
+.checkbox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 28px;
+}
+
+.check {
+    display: none;
+    
+    &:checked + .forCheck::before{
+        background: url(../../assets/checked.png) no-repeat;
+    }
+}
+
+.forCheck {
+    padding-left: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #191c1f;
+
+    &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 24px;
+        height: 24px;
+        background: url(../../assets/unchecked.png) no-repeat;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback{
+        padding: 56px 20px;
+    }
+
+    .title{
+        font-size: calc((100vw - 375px) / (768 - 375) * (40 - 24) + 24px);
+        line-height: calc((100vw - 375px) / (768 - 375) * (140 - 133) + 133%);
+    }
+
+    .form{
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .inputs{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .confirm{
+        margin-top: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .feedback{
+        padding: 56px 16px;
+    }
+
+    .title{
+        font-size: 24px;
+        line-height: 133%;
+    }
+
+    .form{
+        margin-top: 30px;
+    }
+}
